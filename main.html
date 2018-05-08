@@ -52,11 +52,30 @@
             }
             .block-container {
                 display: flex;
+                justify-content: center;
             }
             .block:not(:first-child) {
                 border-left: 1px solid rgba(255, 255, 255, 0.4);
                 padding-left: 2rem;
                 margin-left: 2rem;
+            }
+            .full-width {
+                width: 100%;
+            }
+            .mt-2 {
+                margin-top: 2rem;
+            }
+            .progress-bar {
+              position: relative;
+              height: 8px;
+              width: 400px;
+              background-color: rgba(255,255,255,0.2);
+              margin-top: 0.5rem;
+            }
+            .progress-bar-inner {
+              height: 100%;
+              display: block;
+              background-color: rgba(0, 0, 0, 0.8);
             }
         </style>
     </head>
@@ -77,6 +96,14 @@
                         <div class="block">
                             <span class="time-left-head">Week</span>
                             <span id="wLeft" class="time-left-body"></span>
+                        </div>
+                    </div>
+                    <div class="block-container full-width mt-2">
+                        <div class="block">
+                            <span class="time-left-head">Year - <span id="yLeft">Year</span></span>
+                            <div class="progress-bar">
+                              <span class="progress-bar-inner" id="yearProgressBar"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
