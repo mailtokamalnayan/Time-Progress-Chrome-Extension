@@ -8,6 +8,7 @@ function checkTime(i) {
 function startTime() {
   var today = new Date();
   var dayHour = today.getHours();
+  if (dayHour == 0 ) { dayHour = 1 };
   var min = today.getMinutes();
   var weekDay = today.getDay();
   min = checkTime(min);
