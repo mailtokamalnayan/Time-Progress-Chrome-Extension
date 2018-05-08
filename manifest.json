@@ -1,0 +1,10 @@
+{
+    "name": "Time Progress",
+    "version": "1.0",
+    "description": "Time Progress shows you exactly how much % of the year, month and day has progressed in your new tab for Chrome. Inspired by Year Progress tweets",
+    "permissions": ["storage"],
+    "chrome_url_overrides" : {
+    	"newtab": "main.html"
+  	},
+    "manifest_version": 2
+  }
