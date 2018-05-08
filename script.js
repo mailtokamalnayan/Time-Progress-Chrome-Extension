@@ -7,6 +7,7 @@ function checkTime(i) {
 
 function startTime() {
   var today = new Date();
+  var d = today.getHours();
   var dayHour = today.getHours();
   if (dayHour == 0 ) { dayHour = 1 };
   var min = today.getMinutes();
@@ -23,7 +24,7 @@ function startTime() {
   dLeft = Math.round((dayHour / 24) * 100);
   wLeft = Math.round((weekDay / 7) * 100);
   yLeft = Math.round((dayOfYear / 365) * 100);
-  document.getElementById('time').innerHTML = dayHour + ":" + min;
+  document.getElementById('time').innerHTML = d + ":" + min;
   document.getElementById('mLeft').innerHTML = mLeft + "%";
   document.getElementById('dLeft').innerHTML = dLeft + "%";
   document.getElementById('wLeft').innerHTML = wLeft + "%";
