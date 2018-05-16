@@ -5,6 +5,11 @@ function checkTime(i) {
   return i;
 }
 
+function loaded() {
+  console.log('Image was loaded.');
+  document.querySelector('.hidden-bg-image').classList.add("show-bg-image");
+}
+
 function startTime() {
   var today = new Date();
   var d = today.getHours();
@@ -38,4 +43,13 @@ function startTime() {
 }
 document.addEventListener("DOMContentLoaded", function(event) {
     startTime();
+    var img = document.querySelector('.hidden-bg-image')
+    if (img.complete) {
+      loaded()
+    } else {
+      img.addEventListener('load', loaded)
+      img.addEventListener('error', function() {
+          console.log('Image was not loaded.')
+      })
+    }
   });
